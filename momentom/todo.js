@@ -4,21 +4,41 @@ const toDoform = document.querySelector(".js-toDoForm"),
 
 const TODOS_LS = 'toDos';
 
-const toDos = [];
+let toDos = [];
+
+function deleteToDo(event){
+    const btn = event.target;
+    const li = btn.parentNode;
+    toDoList.removeChild(li) /*html 에서 지우기*/
+
+    /*필터링(클릭한거 빼고 선택되도록)*/
+    const cleanToDos = toDos.filter(function(toDo) {
+        return toDo.id !== parseInt(li.id) /*파라미터에 대한 조건*/;
+    });
+
+    toDos = cleanToDos; /* toDos를 새로 정의*/
+    saveToDos(); /*새로 정의해서 바뀐 toDos를 local storage에 저장*/
+
+   /*local storage 에서 지우기*/
+};
 
 function saveToDos(){
     localStorage.setItem(TODOS_LS, JSON.stringify(toDos));
 }
 
+let idNumbers = 1;
+
 function paintToDo(text){
     const li = document.createElement("li");
-    const delBtn = document.createElement("button");
     const span = document.createElement("span");
-    const newId = toDos.length + 1;
+    const delBtn = document.createElement("button");
+    const newId =  idNumbers;
+    idNumbers += 1;
     delBtn.innerText = "X";
+    delBtn.addEventListener("click", deleteToDo);
     span.innerText = text
-    li.appendChild(delBtn);
     li.appendChild(span);
+    li.appendChild(delBtn);
     li.id = newId;
     toDoList.appendChild(li);
     const toDoObj = {
