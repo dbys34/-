@@ -32,11 +32,19 @@ function paintToDo(text){
     const li = document.createElement("li");
     const span = document.createElement("span");
     const delBtn = document.createElement("button");
+
+    const input = document.createElement("input");
+
     const newId =  idNumbers;
     idNumbers += 1;
     delBtn.innerText = "X";
     delBtn.addEventListener("click", deleteToDo);
-    span.innerText = text
+    span.innerText = text;
+    input.type = 'time';
+    input.min = '00:00';
+    input.max = '23:59';
+
+    li.appendChild(input);
     li.appendChild(span);
     li.appendChild(delBtn);
     li.id = newId;

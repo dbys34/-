@@ -3,13 +3,17 @@
 
 <head>
     <title>yyj</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
-    <div class="js-clock">
-        <h1>00:00</h1>
+    <div class='js-alarm nav'>
+        <h1>00:00:00</h1>
+        <input type='time' min='00:00' max='23:59'/>
     </div>
+
+
+
     <form class="js-form form">
         <input type="text" placeholder="당신의 이름은??" />
     </form>
@@ -23,9 +27,9 @@
     </ul>
 
 
-    <script src="clock.js"></script>
     <script src="gretting.js"></script>
     <script src="todo.js"></script>
+    <script src="alarm.js"></script>
 </body>
 
 </html>
