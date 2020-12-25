@@ -6,6 +6,7 @@ const TODOS_LS = 'toDos';
 
 let toDos = [];
 
+
 function deleteToDo(event){
     const btn = event.target;
     const li = btn.parentNode;
@@ -43,6 +44,8 @@ function paintToDo(text){
     input.type = 'time';
     input.min = '00:00';
     input.max = '23:59';
+    input.className = 'WakeUpTime';
+    input.value = '00:00';
 
     li.appendChild(input);
     li.appendChild(span);

@@ -9,7 +9,7 @@
 <body>
     <div class='js-alarm nav'>
         <h1>00:00:00</h1>
-        <input type='time' min='00:00' max='23:59'/>
+        <input type='time' min='00:00' max='23:59' onchange="bgcolor_yellow(this)"/>
     </div>
 
 
@@ -30,6 +30,11 @@
     <script src="gretting.js"></script>
     <script src="todo.js"></script>
     <script src="alarm.js"></script>
+    <script>
+        function bgcolor_yellow(obj) {
+          obj.style.backgroundColor ='yellow';
+        }
+    </script>
 </body>
 
 </html>
