@@ -45,7 +45,8 @@ function paintToDo(text){
     input.min = '00:00';
     input.max = '23:59';
     input.className = 'WakeUpTime';
-    input.value = '00:00';
+
+    input.id = newId;
 
     li.appendChild(input);
     li.appendChild(span);
