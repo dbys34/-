@@ -13,6 +13,6 @@ body {
     }
     /* for Chrome, Safari */
     @-webkit-keyframes blink {
-    0% {background-color: red;}
+    0% {background-color: black;}
     50% {background-color: white;}
 }
