@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>조용한 알람</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="canonical" href="https://quiet-alarm.netlify.app/index.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="naver-site-verification" content="e4ce3e435050d7987eae867009bce976fc532545" />
+    <meta name="description" content="조용한 알람은 화면의 깜박임으로 당신을 깨워드리는 웹앱입니다." />
+	<meta property="og:title" content="조용한 알람"/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content="조용한 알람은 화면의 깜박임으로 당신을 깨워드리는 웹앱입니다."/>
+</head>
+
+<body>
+    <div class='mx-auto' style="width: 800px;">
+        <div class='mx-auto js-alarm nav' style="width: 200px;">
+            <h1>00:00:00</h1>
+        </div>
+        <form class="js-form form">
+            <input type="text" class="form-control" placeholder="당신의 이름은?" />
+        </form>
+
+        <h4 class="js-greetings greetings"></h4>
+
+        <form class="js-toDoForm">
+            <input type="text" class="form-control" placeholder="알람 이름" />
+        </form>
+        <ul class="list-group js-toDoList">
+        </ul>
+    </div>
+
+    <script src="gretting.js"></script>
+    <script src="todo.js"></script>
+    <script src="alarm.js"></script>
+    <script>
+        function bgcolor_yellow(obj) {
+          obj.style.backgroundColor ='yellow';
+        }
+    </script>
+</body>
+
+</html>
