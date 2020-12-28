@@ -9,11 +9,29 @@
 /* 기본 css코드에 추가 */
 .alarmOn {
     animation: blink 1s step-end infinite;
-    }
-    /* for Chrome, Safari */
-    @-webkit-keyframes blink {
-    0% {background-color: red;}
-    50% {background-color: white;}
-    }
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 150px 1fr 50px;
+}
+
+.list-group span{
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+h1{
+    font-size: 60px;
+}
+h4{
+    font-size: 16px;
+}
+
+/* for Chrome, Safari */
+@-webkit-keyframes blink {
+0% {background-color: red;}
+50% {background-color: white;}
+}
 
     
