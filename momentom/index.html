@@ -18,6 +18,7 @@
 </head>
 
 <body>
+
     <div class='mx-auto' style="width: 800px;">
         <div class='mx-auto js-alarm nav' style="width: 200px;">
             <h1>00:00:00</h1>
@@ -29,20 +30,28 @@
         <h4 class="js-greetings greetings"></h4>
 
         <form class="js-toDoForm">
-            <input type="text" class="form-control" placeholder="알람 이름" />
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="알람 이름" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2">알람 생성</button>
+            </div>
+
         </form>
         <ul class="list-group js-toDoList">
         </ul>
+    </div>
+    <div class="fixed-bottom ad-banner">
+        <ins class="kakao_ad_area" style="display:none;" 
+        data-ad-unit    = "DAN-JZdLx7XcaZhoE1PZ" 
+        data-ad-width   = "728" 
+        data-ad-height  = "90"></ins> 
+       <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
     </div>
 
     <script src="gretting.js"></script>
     <script src="todo.js"></script>
     <script src="alarm.js"></script>
-    <script>
-        function bgcolor_yellow(obj) {
-          obj.style.backgroundColor ='yellow';
-        }
-    </script>
+    <script src="popup.js"></script>
+
 </body>
 
 </html>

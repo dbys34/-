@@ -29,6 +29,10 @@ h4{
     font-size: 16px;
     margin-bottom: 30px;
 }
+.ad-banner{
+    width: 728px;
+    margin: 0 auto;
+}
 
 /* for Chrome, Safari */
 @-webkit-keyframes blink {
